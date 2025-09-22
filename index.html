@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Unknown Shopper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="brand" aria-label="Ir al inicio">
+                <img src="logo.png" alt="The Unknown Shopper - Logo" class="brand-logo" />
+                <span class="brand-name">The Unknown Shopper</span>
+            </a>
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="about.html">Nosotros</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>The Unknown Shopper</h2>
+            <h3>Servicios Estratégicos Empresariales</h3>
+            <p>Ofrecemos servicios estratégicos empresariales para ayudar a las empresas a mejorar su presencia en el mercado y a alcanzar sus objetivos de crecimiento.</p>
+            
+        </section>
+
+        <section class="servicios" id="servicios">
+            <h2>Servicios</h2>
+            <div class="cards-grid">
+                <article class="card" data-service="mystery-shopping">
+                    <h3>Mystery Shopping</h3>
+                    <p>Evaluamos la experiencia real de tus clientes para detectar oportunidades de mejora.</p>
+                    <div class="card-actions">
+                        <a class="btn btn-outline" href="servicios/mystery-shopping.html" aria-label="Ir a la página de detalle de Mystery Shopping">Ver página</a>
+                        <button class="btn btn-secondary ver-detalle" aria-label="Vista rápida de Mystery Shopping">Vista rápida</button>
+                    </div>
+                </article>
+                <article class="card" data-service="estudios-mercado">
+                    <h3>Estudios de Mercado</h3>
+                    <p>Investigación cuantitativa y cualitativa para tomar decisiones con datos.</p>
+                    <div class="card-actions">
+                        <a class="btn btn-outline" href="servicios/estudios-mercado.html" aria-label="Ir a la página de detalle de Estudios de Mercado">Ver página</a>
+                        <button class="btn btn-secondary ver-detalle" aria-label="Vista rápida de Estudios de Mercado">Vista rápida</button>
+                    </div>
+                </article>
+                <article class="card" data-service="sitios-web">
+                    <h3>Sitios Web</h3>
+                    <p>Diseño y desarrollo de sitios modernos, rápidos y orientados a conversión.</p>
+                    <div class="card-actions">
+                        <a class="btn btn-outline" href="servicios/sitios-web.html" aria-label="Ir a la página de detalle de Sitios Web">Ver página</a>
+                        <button class="btn btn-secondary ver-detalle" aria-label="Vista rápida de Sitios Web">Vista rápida</button>
+                    </div>
+                </article>
+                <article class="card" data-service="integraciones-crm">
+                    <h3>Integraciones CRM</h3>
+                    <p>Conectamos tus herramientas para centralizar datos y acelerar ventas.</p>
+                    <div class="card-actions">
+                        <a class="btn btn-outline" href="servicios/integraciones-crm.html" aria-label="Ir a la página de detalle de Integraciones CRM">Ver página</a>
+                        <button class="btn btn-secondary ver-detalle" aria-label="Vista rápida de Integraciones CRM">Vista rápida</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Modal Detalle Servicio -->
+        <div id="serviceModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle" aria-modal="true">
+            <div class="modal-backdrop" data-close></div>
+            <div class="modal-content" role="document">
+                <button class="modal-close" aria-label="Cerrar" data-close>&times;</button>
+                <h3 id="modalTitle"></h3>
+                <p id="modalBody"></p>
+                <ul id="modalBullets" class="modal-bullets"></ul>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <div class="footer-brand">
+                <img src="logo.png" alt="The Unknown Shopper - Logo" />
+                <div>
+                    <div class="footer-title">The Unknown Shopper</div>
+                    <div>Servicios Estratégicos Empresariales</div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <strong>Contacto</strong>
+                <span><a href="https://unknownshoppers.com" target="_blank" rel="noopener">unknownshoppers.com</a></span>
+                <span><a href="mailto:the@unknownshoppers.com">the@unknownshoppers.com</a></span>
+                <span>Alberto García, Publicista</span>
+                <span><a href="tel:+529932171855">9932171855</a></span>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2025 The Unknown Shopper</div>
+    </footer>
+    <script src="script.js"></script>
+    
+</body>
+</html>

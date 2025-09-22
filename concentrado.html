@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concentrado | The Unknown Shopper</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="Ir al inicio">
+        <img src="logo.png" alt="The Unknown Shopper - Logo" class="brand-logo" />
+        <span class="brand-name">The Unknown Shopper</span>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <a href="index.html">Inicio</a>
+      <span class="sep">/</span>
+      <strong>Concentrado</strong>
+    </nav>
+
+    <section>
+      <h1>Concentrado de Servicios</h1>
+      <p class="lead">Vista en árbol de los servicios y subservicios de The Unknown Shopper.</p>
+    </section>
+
+    <section class="servicios" style="margin-top:1rem;">
+      <h2>Estructura</h2>
+      <div class="tree-toolbar">
+        <button id="expandAll" class="btn btn-outline" type="button">Expandir todo</button>
+        <button id="collapseAll" class="btn btn-outline" type="button">Colapsar todo</button>
+      </div>
+      <ul class="legend" aria-label="Leyenda de nodos">
+        <li><strong>Empresa:</strong> The Unknown Shopper</li>
+        <li><strong>Servicios:</strong> <span class="node svc-mystery">Mystery</span> <span class="node svc-estudios">Estudios</span> <span class="node svc-sitios">Sitios</span> <span class="node svc-crm">CRM</span></li>
+        <li><strong>Tipos:</strong> <span class="meta">Servicio</span>, <span class="meta">Subservicio</span>, <span class="meta">Metodología</span>, <span class="meta">Optimización</span>, <span class="meta">Análisis</span>, <span class="meta">Entregable</span>, <span class="meta">Adopción</span></li>
+        <li><strong>Precio:</strong> <span class="price-badge">$0.00</span> (se define en reunión)</li>
+      </ul>
+
+      <ul class="tree">
+        <li class="has-children">
+          <div class="row"><button class="toggle" aria-label="Colapsar rama" aria-expanded="true">−</button><span class="node root-node">The Unknown Shopper</span></div>
+          <span class="meta">Empresa</span>
+          <span class="meta-desc">Consultoría y ejecución en CX, research, web y sales ops.</span>
+
+          <ul>
+            <!-- Mystery Shopping -->
+            <li class="has-children">
+              <div class="row"><button class="toggle" aria-label="Colapsar rama" aria-expanded="true">−</button><span class="node svc-mystery">Mystery Shopping</span></div>
+              <span class="meta">Servicio</span>
+              <span class="meta-desc">Clientes incógnitos para evaluar experiencia y protocolos.</span>
+              <ul>
+                <li><span class="node">Diseño de escenarios y KPIs <span class="price-badge">$0.00</span></span><span class="meta">Subservicio</span><span class="meta-desc">Objetivos, criterios y variables clave por industria.</span></li>
+                <li><span class="node">Visitas presenciales y remotas <span class="price-badge">$0.00</span></span><span class="meta">Subservicio</span><span class="meta-desc">Cobertura en tienda y canales digitales.</span></li>
+                <li><span class="node">Reportes con evidencias <span class="price-badge">$0.00</span></span><span class="meta">Subservicio</span><span class="meta-desc">Fotos, capturas y recomendaciones priorizadas.</span></li>
+                <li><span class="node">Benchmark por sucursal y competidor <span class="price-badge">$0.00</span></span><span class="meta">Subservicio</span><span class="meta-desc">Comparativos internos y contra el mercado.</span></li>
+                <li><span class="node">Capacitaciones en protocolos <span class="price-badge">$0.00</span></span><span class="meta">Subservicio</span><span class="meta-desc">Entrenamiento en atención y venta consultiva.</span></li>
+                <li><span class="node">Evaluaciones de personal <span class="price-badge">$0.00</span></span><span class="meta">Subservicio</span><span class="meta-desc">Cumplimiento y skills comerciales.</span></li>
+              </ul>
+            </li>
+
+            <!-- Estudios de Mercado -->
+            <li class="has-children">
+              <div class="row"><button class="toggle" aria-label="Colapsar rama" aria-expanded="true">−</button><span class="node svc-estudios">Estudios de Mercado</span></div>
+              <span class="meta">Servicio</span>
+              <span class="meta-desc">Investigación cuantitativa y cualitativa para decidir con datos.</span>
+              <ul>
+                <li><span class="node">Encuestas online y presenciales <span class="price-badge">$0.00</span></span><span class="meta">Metodología</span><span class="meta-desc">Medición a escala de hábitos y percepción.</span></li>
+                <li><span class="node">Entrevistas y focus groups <span class="price-badge">$0.00</span></span><span class="meta">Metodología</span><span class="meta-desc">Motivaciones, barreras y lenguaje del cliente.</span></li>
+                <li><span class="node">Segmentación, pricing y posicionamiento <span class="price-badge">$0.00</span></span><span class="meta">Análisis</span><span class="meta-desc">Modelos de valor y estrategia competitiva.</span></li>
+                <li><span class="node">Dashboards y storytelling <span class="price-badge">$0.00</span></span><span class="meta">Entregable</span><span class="meta-desc">Visualización e insights accionables.</span></li>
+              </ul>
+            </li>
+
+            <!-- Sitios Web -->
+            <li class="has-children">
+              <div class="row"><button class="toggle" aria-label="Colapsar rama" aria-expanded="true">−</button><span class="node svc-sitios">Sitios Web</span></div>
+              <span class="meta">Servicio</span>
+              <span class="meta-desc">Sitios modernos, rápidos y orientados a conversión.</span>
+              <ul>
+                <li><span class="node">Landing pages y sitios corporativos <span class="price-badge">$0.00</span></span><span class="meta">Capacidad</span><span class="meta-desc">Diseños orientados a conversión e institucional.</span></li>
+                <li><span class="node">Headless CMS y WordPress <span class="price-badge">$0.00</span></span><span class="meta">Capacidad</span><span class="meta-desc">Arquitectura y CMS adecuados para tu equipo.</span></li>
+                <li><span class="node">Web Performance (Core Web Vitals) <span class="price-badge">$0.00</span></span><span class="meta">Optimización</span><span class="meta-desc">Velocidad e interactividad para mejor UX/SEO.</span></li>
+                <li><span class="node">SEO on-page y medición <span class="price-badge">$0.00</span></span><span class="meta">Optimización</span><span class="meta-desc">Marcado, contenido y analítica con GTM/GA4.</span></li>
+              </ul>
+            </li>
+
+            <!-- Integraciones CRM -->
+            <li class="has-children">
+              <div class="row"><button class="toggle" aria-label="Colapsar rama" aria-expanded="true">−</button><span class="node svc-crm">Integraciones CRM</span></div>
+              <span class="meta">Servicio</span>
+              <span class="meta-desc">Centralizamos datos y automatizamos procesos con tu CRM.</span>
+              <ul>
+                <li><span class="node">Implementación y configuración <span class="price-badge">$0.00</span></span><span class="meta">Servicio</span><span class="meta-desc">Adaptación de objetos y procesos comerciales.</span></li>
+                <li><span class="node">Integraciones con formularios y publicidad <span class="price-badge">$0.00</span></span><span class="meta">Integración</span><span class="meta-desc">Leads, campañas y datos operativos.</span></li>
+                <li><span class="node">Automatizaciones y workflows <span class="price-badge">$0.00</span></span><span class="meta">Automatización</span><span class="meta-desc">Reglas y secuencias para nutrir y asignar.</span></li>
+                <li><span class="node">Capacitación y gobierno del dato <span class="price-badge">$0.00</span></span><span class="meta">Adopción</span><span class="meta-desc">Entrenamiento, calidad y políticas de uso.</span></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-brand">
+        <img src="logo.png" alt="The Unknown Shopper - Logo" />
+        <div>
+          <div class="footer-title">The Unknown Shopper</div>
+          <div>Servicios Estratégicos Empresariales</div>
+        </div>
+      </div>
+      <div class="contact-footer">
+        <strong>Contacto</strong>
+        <span><a href="https://unknownshoppers.com" target="_blank" rel="noopener">unknownshoppers.com</a></span>
+        <span><a href="mailto:the@unknownshoppers.com">the@unknownshoppers.com</a></span>
+        <span>Alberto García, Publicista</span>
+        <span><a href="tel:+529932171855">9932171855</a></span>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2025 The Unknown Shopper</div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
