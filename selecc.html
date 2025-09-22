@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selección de Servicios | The Unknown Shopper</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .select-layout { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+    @media (min-width: 900px) { .select-layout { grid-template-columns: 1.3fr 0.7fr; } }
+    .cat { background:#fff; border-radius:8px; padding:1rem; box-shadow:0 2px 5px rgba(0,0,0,.06); }
+    .cat h2 { display:flex; align-items:center; gap:.5rem; font-size:1.1rem; }
+    .cat h3 { margin-top:.75rem; font-size:1rem; }
+    .checklist { list-style:none; margin-top:.25rem; padding-left:0; }
+    .checklist li { margin:.35rem 0; }
+    .row-check { display:flex; align-items:center; gap:.5rem; }
+    .row-meta { margin-left:1.7rem; color:#555; font-size:.95rem; }
+    .summary { position:sticky; top:1rem; background:#fff; border-radius:8px; padding:1rem; box-shadow:0 2px 5px rgba(0,0,0,.06); }
+    .summary h2 { font-size:1.1rem; }
+    .summary ul { list-style:disc; padding-left:1.25rem; margin-top:.5rem; }
+    .actions { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.75rem; }
+    .actions .btn { padding:.5rem .75rem; border-radius:8px; border:1px solid #e1e1e1; background:#fff; cursor:pointer; }
+    .muted { color:#666; font-size:.9rem; }
+    .svc-badge { font-size:.75rem; padding:.1rem .4rem; border-radius:999px; border:1px solid #e5e5e5; background:#f8f8f8; color:#666; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="Ir al inicio">
+        <img src="logo.png" alt="The Unknown Shopper - Logo" class="brand-logo"/>
+        <span class="brand-name">The Unknown Shopper</span>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="concentrado.html">Concentrado</a></li>
+          <li><a href="selecc.html">Selección</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <a href="index.html">Inicio</a>
+      <span class="sep">/</span>
+      <strong>Selección</strong>
+    </nav>
+
+    
+
+    <section id="selectionRoot" class="select-layout">
+      <!-- Columna izquierda: categorías -->
+      <div>
+        <!-- Mystery Shopping -->
+        <div class="cat">
+          <h2><input type="checkbox" class="chk-parent" data-cat="mystery" id="cat-mystery"> <label for="cat-mystery"><span class="svc-badge">Servicio</span> Mystery Shopping</label></h2>
+          <p class="muted">Clientes incógnitos para evaluar experiencia y protocolos.</p>
+          <h3>Subservicios</h3>
+          <ul class="checklist" data-cat="mystery">
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="mystery" data-name="Diseño de escenarios y KPIs" id="mystery-1">
+                <label for="mystery-1"><strong>Diseño de escenarios y KPIs</strong></label>
+              </div>
+              <div class="row-meta muted">Objetivos, criterios y variables clave por industria.</div>
+            </li>
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="mystery" data-name="Visitas presenciales y remotas" id="mystery-2">
+                <label for="mystery-2"><strong>Visitas presenciales y remotas</strong></label>
+              </div>
+              <div class="row-meta muted">Cobertura en tienda y canales digitales.</div>
+            </li>
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="mystery" data-name="Reportes con evidencias" id="mystery-3">
+                <label for="mystery-3"><strong>Reportes con evidencias</strong></label>
+              </div>
+              <div class="row-meta muted">Fotos, capturas y recomendaciones priorizadas.</div>
+            </li>
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="mystery" data-name="Benchmark por sucursal y competidor" id="mystery-4">
+                <label for="mystery-4"><strong>Benchmark por sucursal y competidor</strong></label>
+              </div>
+              <div class="row-meta muted">Comparativos internos y contra el mercado.</div>
+            </li>
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="mystery" data-name="Capacitaciones en protocolos" id="mystery-5">
+                <label for="mystery-5"><strong>Capacitaciones en protocolos</strong></label>
+              </div>
+              <div class="row-meta muted">Entrenamiento en atención y venta consultiva.</div>
+            </li>
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="mystery" data-name="Evaluaciones de personal" id="mystery-6">
+                <label for="mystery-6"><strong>Evaluaciones de personal</strong></label>
+              </div>
+              <div class="row-meta muted">Cumplimiento y skills comerciales.</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="cat">
+          <h2><input type="checkbox" class="chk-parent" data-cat="social" id="cat-social"> <label for="cat-social"><span class="svc-badge">Servicio</span> Social Media</label></h2>
+          <p class="muted">Estrategia, contenido y comunidad para marca y performance.</p>
+          <h3>Capacidades</h3>
+          <ul class="checklist" data-cat="social">
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="social" data-name="Estrategia y lineamientos de marca" id="social-1">
+                <label for="social-1"><strong>Estrategia y lineamientos de marca</strong></label>
+              </div>
+              <div class="row-meta muted">Arquitectura de contenidos, tono y pilares.</div>
+            </li>
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="social" data-name="Calendario editorial y producción" id="social-2">
+                <label for="social-2"><strong>Calendario editorial y producción</strong></label>
+              </div>
+              <div class="row-meta muted">Plan mensual, copies, creatividades y formatos.</div>
+            </li>
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="social" data-name="Gestión de comunidad" id="social-3">
+                <label for="social-3"><strong>Gestión de comunidad</strong></label>
+              </div>
+              <div class="row-meta muted">Monitoreo, respuesta e inbound en redes.</div>
+            </li>
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="social" data-name="Paid Social y optimización" id="social-4">
+                <label for="social-4"><strong>Paid Social y optimización</strong></label>
+              </div>
+              <div class="row-meta muted">Campañas, segmentación y mejora continua.</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Estudios de Mercado -->
+        <div class="cat">
+          <h2><input type="checkbox" class="chk-parent" data-cat="estudios" id="cat-estudios"> <label for="cat-estudios"><span class="svc-badge">Servicio</span> Estudios de Mercado</label></h2>
+          <p class="muted">Investigación cuantitativa y cualitativa para decidir con datos.</p>
+          <h3>Metodologías</h3>
+          <ul class="checklist" data-cat="estudios">
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="estudios" data-name="Encuestas online y presenciales" id="estudios-1">
+                <label for="estudios-1"><strong>Encuestas online y presenciales</strong></label>
+              </div>
+              <div class="row-meta muted">Medición a escala de hábitos y percepción.</div>
+            </li>
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="estudios" data-name="Entrevistas y focus groups" id="estudios-2">
+                <label for="estudios-2"><strong>Entrevistas y focus groups</strong></label>
+              </div>
+              <div class="row-meta muted">Motivaciones, barreras y lenguaje del cliente.</div>
+            </li>
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="estudios" data-name="Segmentación, pricing y posicionamiento" id="estudios-3">
+                <label for="estudios-3"><strong>Segmentación, pricing y posicionamiento</strong></label>
+              </div>
+              <div class="row-meta muted">Modelos de valor y estrategia competitiva.</div>
+            </li>
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="estudios" data-name="Dashboards y storytelling" id="estudios-4">
+                <label for="estudios-4"><strong>Dashboards y storytelling</strong></label>
+              </div>
+              <div class="row-meta muted">Visualización e insights accionables.</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Sitios Web -->
+        <div class="cat">
+          <h2><input type="checkbox" class="chk-parent" data-cat="sitios" id="cat-sitios"> <label for="cat-sitios"><span class="svc-badge">Servicio</span> Sitios Web</label></h2>
+          <p class="muted">Sitios modernos, rápidos y orientados a conversión.</p>
+          <h3>Capacidades</h3>
+          <ul class="checklist" data-cat="sitios">
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="sitios" data-name="Landing pages y sitios corporativos" id="sitios-1">
+                <label for="sitios-1"><strong>Landing pages y sitios corporativos</strong></label>
+              </div>
+              <div class="row-meta muted">Diseños orientados a conversión e institucional.</div>
+            </li>
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="sitios" data-name="Headless CMS y WordPress" id="sitios-2">
+                <label for="sitios-2"><strong>Headless CMS y WordPress</strong></label>
+              </div>
+              <div class="row-meta muted">Arquitectura y CMS adecuados para tu equipo.</div>
+            </li>
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="sitios" data-name="Web Performance (Core Web Vitals)" id="sitios-3">
+                <label for="sitios-3"><strong>Web Performance (Core Web Vitals)</strong></label>
+              </div>
+              <div class="row-meta muted">Velocidad e interactividad para mejor UX/SEO.</div>
+            </li>
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="sitios" data-name="SEO on-page y medición" id="sitios-4">
+                <label for="sitios-4"><strong>SEO on-page y medición</strong></label>
+              </div>
+              <div class="row-meta muted">Marcado, contenido y analítica con GTM/GA4.</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Integraciones CRM -->
+        <div class="cat">
+          <h2><input type="checkbox" class="chk-parent" data-cat="crm" id="cat-crm"> <label for="cat-crm"><span class="svc-badge">Servicio</span> Integraciones CRM</label></h2>
+          <p class="muted">Centralizamos datos y automatizamos procesos con tu CRM.</p>
+          <h3>Servicios</h3>
+          <ul class="checklist" data-cat="crm">
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="crm" data-name="Implementación y configuración" id="crm-1">
+                <label for="crm-1"><strong>Implementación y configuración</strong></label>
+              </div>
+              <div class="row-meta muted">Adaptación de objetos y procesos comerciales.</div>
+            </li>
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="crm" data-name="Integraciones con formularios y publicidad" id="crm-2">
+                <label for="crm-2"><strong>Integraciones con formularios y publicidad</strong></label>
+              </div>
+              <div class="row-meta muted">Leads, campañas y datos operativos.</div>
+            </li>
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="crm" data-name="Automatizaciones y workflows" id="crm-3">
+                <label for="crm-3"><strong>Automatizaciones y workflows</strong></label>
+              </div>
+              <div class="row-meta muted">Reglas y secuencias para nutrir y asignar.</div>
+            </li>
+            <li>
+              <div class="row-check">
+                <input type="checkbox" class="chk-item" data-cat="crm" data-name="Capacitación y gobierno del dato" id="crm-4">
+                <label for="crm-4"><strong>Capacitación y gobierno del dato</strong></label>
+              </div>
+              <div class="row-meta muted">Entrenamiento, calidad y políticas de uso.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Columna derecha: resumen -->
+      <aside class="summary">
+        <h2>Resumen de selección</h2>
+        <p class="muted">Tu selección se actualizará automáticamente.</p>
+        <ul id="selectionList"></ul>
+        <div class="actions">
+          <button id="copySelection" class="btn">Copiar</button>
+          <button id="downloadSelectionPdf" class="btn">Descargar PDF</button>
+          <button id="clearSelection" class="btn">Limpiar</button>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Contenido para impresión (oculto en pantalla) -->
+    <section id="printSelection" class="print-only print-doc" aria-hidden="true">
+      <header class="print-header">
+        <div class="brandlog">
+          <img src="logosim.png" alt="The Unknown Shopper - Logo" />
+          <div>
+            <h1 class="print-title">The Unknown Shopper</h1>
+            <div class="print-subtitle">Selección de servicios</div>
+          </div>
+        </div>
+      </header>
+      <div class="print-date" id="printDate"></div>
+      <div id="printSelectionList"></div>
+      <footer class="print-footer">
+        <div class="brandline">The Unknown Shopper</div>
+        <div class="contact">unknownshoppers.com · the@unknownshoppers.com · 9932171855</div>
+      </footer>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-brand">
+        <img src="logo.png" alt="The Unknown Shopper - Logo"/>
+        <div>
+          <div class="footer-title">The Unknown Shopper</div>
+          <div>Servicios Estratégicos Empresariales</div>
+        </div>
+      </div>
+      <div class="contact-footer">
+        <strong>Contacto</strong>
+        <span><a href="https://unknownshoppers.com" target="_blank" rel="noopener">unknownshoppers.com</a></span>
+        <span><a href="mailto:the@unknownshoppers.com">the@unknownshoppers.com</a></span>
+        <span>Alberto García, Publicista</span>
+        <span><a href="tel:+529932171855">9932171855</a></span>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2025 The Unknown Shopper</div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
