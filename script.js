@@ -204,6 +204,18 @@ const SERVICES = {
     collapseAllBtn.addEventListener('click', () => setTreeAll(false));
   }
 
+  // Descargar PDF del concentrado: expandir todo y luego imprimir
+  const downloadPdfBtn = document.getElementById('downloadPdf');
+  if (downloadPdfBtn) {
+    downloadPdfBtn.addEventListener('click', () => {
+      setTreeAll(true);
+      // Esperar a que terminen animaciones antes de imprimir
+      setTimeout(() => {
+        window.print();
+      }, 350);
+    });
+  }
+
   // Colapsar por defecto todas las ramas del árbol
   (function initTreeCollapsed() {
     const treeNodes = document.querySelectorAll('.tree li.has-children');

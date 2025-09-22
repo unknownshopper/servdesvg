@@ -1,3 +1,10 @@
+/* Estilos de impresión */
+@media print {
+  header, .site-header, .site-footer, .breadcrumb, .legend, .tree-toolbar { display: none !important; }
+  body { background: #fff; }
+  .servicios { box-shadow: none; border: none; }
+  .tree .node { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
 * {
     margin: 0;
     padding: 0;
